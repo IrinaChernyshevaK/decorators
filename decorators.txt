@@ -1,0 +1,22 @@
+def is_prime(func):
+    def wrapper(*args):
+        res=func(*args)
+        d = 2
+        while res % d != 0:
+            d += 1
+        if d == res:
+            otv=f'Простое \n{res}'
+        else:
+            otv=f'Составное \n{res}'
+        return otv
+    return wrapper
+
+@is_prime
+def sum_three(*nums):
+    result = 0
+    for num in nums:
+        result += num
+    return result
+
+result = sum_three(2, 3, 6)
+print(result)
