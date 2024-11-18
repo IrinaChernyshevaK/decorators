@@ -5,9 +5,9 @@ def is_prime(func):
         while res % d != 0:
             d += 1
         if d == res:
-            otv=f'Простое \n{res}'
+            otv=f'РџСЂРѕСЃС‚РѕРµ \n{res}'
         else:
-            otv=f'Составное \n{res}'
+            otv=f'РЎРѕСЃС‚Р°РІРЅРѕРµ \n{res}'
         return otv
     return wrapper
 
